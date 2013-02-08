@@ -22,3 +22,7 @@ You may also use ko-punch without attaching it to your ViewModel.  To do that, y
 License
 -----------------------
 ko-punch is licensed under the MIT license.
+
+Test Coverage
+-----------------------
+You can run the unit tests for ko-punch by visiting <a href="https://j5bot.github.com/ko-punch/test/index.html">unminified</a> and <a href="https://j5bot.github.com/ko-punch/test/minified.html">minified</a> QUnit test pages.
