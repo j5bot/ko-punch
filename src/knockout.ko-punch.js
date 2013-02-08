@@ -1,7 +1,16 @@
-/* ko-punch: knockout.ko-punch.js */
+/** 
+ * @preserve ko-punch knockoutjs extensions v0
+ * http://github.com/j5bot/ko-punch
+ *
+ * Copyright (c) 2013 Jonathan 'J5' Cook <jonathan.j5.cook@gmail.com>
+ * MIT License: http://github.com/j5bot/ko-punch/blob/master/LICENSE
+ */
 
-(function (ko,undefined) {
-	
+/*jshint*/
+/*global ko: true */
+
+(function (ko, undefined) {
+
 	/*
 	 * the punch function creates a new observable on the inheriting ViewModel
 	 *
@@ -53,21 +62,21 @@
 	 *
 	 * examples:
 	 *
-	 *	ko.observable().punch(viewModel, "lazyProperty"); 				 // creates viewModel.lazyProperty with undefined value
-	 *	ko.observable().punch(viewModel, "lazyProperty", "zzzzZZZZzzz"); // creates viewModel.lazyProperty with initial value
+	 *	ko.observable().punch(viewModel, "lazyProperty");					// creates viewModel.lazyProperty with undefined value
+	 *	ko.observable().punch(viewModel, "lazyProperty", "zzzzZZZZzzz");	// creates viewModel.lazyProperty with initial value
 	 *
-	 *	ko.observable("zzzzZZZZZzzzz").punch(viewModel, "lazyProperty"); // creates viewModel.lazyProperty with initial value
+	 *	ko.observable("zzzzZZZZZzzzz").punch(viewModel, "lazyProperty");	// creates viewModel.lazyProperty with initial value
 	 *
 	 *	ko.observable().punch({
 	 *		target: viewModel,
 	 *		observable: "lazyProperty",
 	 *		value: "zzzzZZZZZzzzz"
-	 *	});																 // creates viewModel.lazyProperty with initial value
+	 *	});																	// creates viewModel.lazyProperty with initial value
 	 *
 	 */
 	ko.subscribable.fn.punch = function (target,observable,value) {
 		if (!target) return;
-		if (observable == undefined) {
+		if (observable === undefined) {
 			observable = target.observable;
 			value = target.value;
 			target = target.target;
