@@ -14,12 +14,12 @@ Add the ability to directly "punch" onto your ViewModel by running something lik
 
 	ViewModel.punch = ko.punch(ViewModel);
 
+Wherein you pass the ViewModel as a parameter into ko.punch and assign the function/object which is returned to a property of your ViewModel.
+
 Use it like this:
 
 	ViewModel.punch("newObservable", "newValue");
 	ViewModel.punch.observableArray("newObservableArray", [1,2,3]);
-
-Wherein you pass the ViewModel as a parameter into ko.punch and assign the function/object which is returned to a property of your ViewModel.
 
 You may also use ko-punch without attaching it to your ViewModel.  To do that, you call punch on any type of KO observable/subscribable.  For example:
 
